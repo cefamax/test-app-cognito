@@ -6,8 +6,8 @@ Nodejs application for cognito authentication functionality
 - Aws Accont
 
 ## 2. COGNITO: Create user group
-In Cognito service, create a new User Group Pool.
-Do not use the client secret as it is not supported in the JS SDK.
+In Cognito service, create a new User Group Pool.</br>
+**Do not use the client secret as it is not supported in the JS SDK.**
 
 ## 3. Install components
 ```
