@@ -62,10 +62,10 @@ const RegisterUser = (email, password, userData) => {
         });
 }
 
-const ConfirmRegistration = (confirmCode) => {
+const ConfirmRegistration = (confirmCode, username) => {
 
     const userData = {
-        Username: USER_TEST_EMAIL,
+        Username: username,
         Pool: userPool
     };
     var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
@@ -112,13 +112,13 @@ const Login = (username, password) => {
     });
 }
 
-const RefreshToken = (refresh_token) => {
+const RefreshToken = (refresh_token, username) => {
     const RefreshToken = new AmazonCognitoIdentity.CognitoRefreshToken({ RefreshToken: refresh_token });
 
     const userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
 
     const userData = {
-        Username: USER_TEST_EMAIL,
+        Username: username,
         Pool: userPool
     };
 
@@ -236,7 +236,7 @@ const ChangePassword = (username, password, newpassword) => {
 //RegisterUser(USER_TEST_EMAIL, USER_TEST_PASSWORD, USER_TEST_DATA);
 //ConfirmRegistration('573450');
 //Login(USER_TEST_EMAIL, USER_TEST_PASSWORD);
-//RefreshToken('eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.LAlIlJoU0I6f6pPkXGF2Vwl-J_WSXtNuqCOQCCuQjLViAmG_R3wOvhkcYDGLjVBKfsWX0x7Kj7lzlNKramnD0rZSuqdeq2YlxTg1ZX7LMFCQhSEhKyMzrDAGHjhzDL9hbYnoQpiNXH8bQ4EiFSRrfRV1vUrOgeHff3I9qxhlViVPnuUG00ncpmGrRircIC1XsVfki3lAnnFMp94OlOybUvF2b-E2poF4Had7jCr-bZuZLBXtECq9yGk5dejRPfP3pHYVdTEuX0LuQ6HdRMUUJ81yso_lSDKv9SDnwTMO-Iq9BfCTe2OnRUcsTjmQ5tZR5hwJioIK8VB5ge69cirJxw.SsQWPAQemoFImRha.ng6WuhGI7oopKobh_0zpv4VZb8fqU7n-UI-j4c8d4Q6AcA-bANlfM_DotgQPrClgWD-101FweyaSdibTJJBkdURmeIsyHmuneIncjmRp5qMUBv9_bI-nu08gHw21rfjXCj88gJwHfFhvrJUZ80emvWWlXLpuNusgQGx0AtDkjnEK2uoMuOvh4SDtcTWRrWtvsFWzNRnuhTPaIj-kFPPHTZdqS-3mWjeoF9t0Y9LYD1MaSvkDKjogEXZAtaZQPdLgFnB7CNtC65RoiV0AYR_TuqlkRozkCSP7e7Mq2GfKCGEps_VMGdZyIk2bKSq-CpBJVhpVhd9FYBQGZ537Jv9sTpyp7qQpj6TbSSwPPLTj4msdYvqKRxn4paN8txWrJKcogcp2CIhlJxCGHXn4Z6uyOCvm1zGkGZot-WXC1VSs65nDGhCwJ0FULgbe-otwCQ1iNRqiY5FnzTx0X801hU3vXvM3IXTXkbxq-jU88v-k1mt-obvM059DoP4xlgV1Ssy5DnfirqW4PxfsY2ZeQWSrvXmIPY9i2Y2YtgF-MVqRnPwxPsiNND9EqEelJiu34TOyK8UDTDOgFK21Zq8UP1_Jned4O-S75n2AWGE6QBK4Wr_cr6k-6exP0bwwXMiS-6jlEnQxL4X99mPKfZTQY05v4_GiJVl9Za1vYkuirYt0yZ-fu3E92Uf0jCMNT5ixj0IKn7wUv-sysB0U6aZi2qAHvqC21QMhkXXrewyKLT8XFKO4P1sAbCIS7XvcaRI8MnNGVMY9xpxt5Ydk3XC2lyi28w66KpMfrRzrqVpzCWFVMRLJz31uXar8s14gfousLx3RXoSSJW9im62fDxC-_5VmrJfOyFvlSvWL3bkQA43-PdsqLkFcFw4O49svGhGMxJxmQPVpIlYyQAGA7GViI6TLWQ1xh-qrRnN_bjoKOBr5dGXKk66TYzV8jENgc-NlzVeR_FSXol1e70LQvdCNcy7yWFehqaeWkvH1QOgvfX6fl3rFz_SyivCJSn5X5YKXfrJ2FFbmld3BdokP7AXnWSoY5t7b7nQxUDlBlXLKirTG9V8A1jmRNspEb-YThYXGvGYTAhrQnwFO4cLhuz5j0j8Rv1Vg7_680bSuHPplZQRmHwc2Ddq_UA_-xcHK887gRh7mMnfamNrSVDMxBKXRHmyMqh3M6cKoMbuZqu6VCfiHkJpLmAEkua0awrWaEkwg5KiUnuSVhXrSX6SV6V35p6XFp7v-f0JVQvCkXZW90eWNNAJe7xGpHM-zkkqlZh1Pr2M85u9FfnuKUM_mVd_CwwN7I1tL-7S0XLsIWs5NzRca3Y5e9sLpPsHtBBswWk9LVg.2IAKvqa8RToU-Gwj2gUaSA');
+//RefreshToken('token');
 // DeleteAttributes(USER_TEST_EMAIL, USER_TEST_PASSWORD);
 //ChangePassword(USER_TEST_EMAIL, USER_TEST_PASSWORD, USER_TEST_PASSWORD_CHANGED);
 //Login(USER_TEST_EMAIL, USER_TEST_PASSWORD_CHANGED);
