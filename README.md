@@ -18,7 +18,9 @@ npm install
 Rename .env.template to .env and compile with Cognito sample data.
 
 ## 5. Use application
-Thi application is an example to test Cognito function to nodejs. Contains the following functions:
+Thi application is an example to test Cognito function to nodejs. 
+</br>
+Contains the following functions:
 - Register user
 - Confirm user with email or sms code
 - Login user
