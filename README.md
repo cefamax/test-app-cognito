@@ -1,4 +1,4 @@
-# test-app-cognito
+# NodeJS AWS Cognito function test
 Nodejs application for cognito authentication functionality
 </br>
 ## 1. Prerequisites
