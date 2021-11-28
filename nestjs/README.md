@@ -1,0 +1,38 @@
+# NestJS integration AWS Cognito
+[NestJS](https://nestjs.com/) application with [AWS Cognito](https://aws.amazon.com/en/cognito/) authentication functionality
+</br>
+## 1. Prerequisites
+- NodeJs 12+
+- Aws Accont
+
+## 2. COGNITO: Create user group
+In Cognito service, create a new User Group Pool.</br>
+**Do not use the client secret as it is not supported in the JS SDK.**
+
+## 3. Install components
+```
+npm install
+```
+
+## 4. Compile Env
+Rename .env.template to .env and compile with Cognito auth data.
+
+## 5. Build & Run
+```
+npm run build
+npm run start
+```
+
+## 6. Use application
+Thi application is a NestJS to test Cognito authentication. 
+</br>
+Contains the following route:
+- auth/register --> Register user
+- auth/confirm --> Confirm user with email or sms code
+- auth/login --> Login user
+- auth/refresh --> Refresh token
+- auth/user --> Delete user
+- / --> test jwt guard with Cognito token
+
+## 7. Documentation
+The file ./postman/cognito.postman_collection.json can be imported in Postman application to test this api.

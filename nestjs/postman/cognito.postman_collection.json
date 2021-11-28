@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "1db27d31-73c0-4853-90d9-0eeafe7fcf20",
+		"name": "cognito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "nestjs",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"Max$1234\",\r\n    \"email\": \"m.petrolati@gmail.com\",\r\n    \"phone_number\": \"+393200883974\",\r\n    \"name\": \"Massimo Petrolati\",\r\n    \"gender\": \"male\",\r\n    \"birthdate\": \"1976-06-01\",\r\n    \"address\": \"strada della\",\r\n    \"scope\": \"editor\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "test token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJraWQiOiIzd2VMaUpSYVNaTWxjcWJkYUFlb0wrc2ZMTVU3bmhFUThKY2JJa2EwYVwvbz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxODFlNWE5YS0xNGQwLTQzNmQtYWJjNC0xNjhhNTRmNTE5NjEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYmlydGhkYXRlIjoiMTk3Ni0wNi0wMSIsImdlbmRlciI6Im1hbGUiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9vT0E5c3hzVmgiLCJwaG9uZV9udW1iZXJfdmVyaWZpZWQiOmZhbHNlLCJjb2duaXRvOnVzZXJuYW1lIjoiMTgxZTVhOWEtMTRkMC00MzZkLWFiYzQtMTY4YTU0ZjUxOTYxIiwib3JpZ2luX2p0aSI6ImJlNDVhMDNmLTNmOGItNGQyMS1iMzBjLTQzZjY0NzYzNmRlYiIsImF1ZCI6IjRuOWhyN2h0MzFhcWRxMGdwcjd0bXBva2hlIiwiZXZlbnRfaWQiOiJiOTI0MmU4NS02NDA2LTRmYmYtOWYxZC04MzE0MGJkZDQ0MzEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTYzODA4NzE4NCwicGhvbmVfbnVtYmVyIjoiKzM5MzIwMDg4Mzk3NCIsImV4cCI6MTYzODA5MDc4NCwiaWF0IjoxNjM4MDg3MTg0LCJqdGkiOiI4YjNjYTg0Ny1jMTlkLTQ3MTEtOWY3My05ZjdjZjk4OTZjYjYiLCJlbWFpbCI6Im0ucGV0cm9sYXRpQGdtYWlsLmNvbSJ9.JaFS__bnK2Bv18qo3tZQ4I5fScmjPgb4P4626oO241mjatQhBz_BH0STh-VnORRWBKyF9xjWV2gG6MrCAEU85ZvxQqwYkc4QX2Cwunz6LR01Y7T9CDCGJQy3ZUoniJVFcJgoPLEbk10KkG1FL5Q1BSkHAsKmt_163MlOoOYiFuZks_O6Dgi9FZKPICPCWvbeqcYpzCUkwRaF0kDoX24t8G4klOjeW_9N2_k9tUcNjLxuDfO5ZzdJdezHpGjEdH2m-jAMaqCcil5C10dtY7eHlSEFkcYJ4mXX84F3LcOHu2Q6eXvuVAyWb0gJEHxD6nN5FqX3BJm_JHjce9bkxqLMww",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"Max$1234\",\r\n    \"email\": \"m.petrolati@gmail.com\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"Max$1234\",\r\n    \"email\": \"m.petrolati@gmail.com\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refreshToken\": \"eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.H7Lo2on644uBDAwQryiJijcEBZ1TSSO5gftj6nU5DAf3RnTnTVIzThVhefeQQaCBUsrnsnVLZw3svVhvusBJ4FR0UBuVOorsSXNAkhLD3fft1tjrd-MU0il2DRxR2C29gShpyJOkuJaWT8iOtWhI9y4QgfRel5MDdbRzeD8S505XmZ6bNV1EEtbObVXrCK5ILN6L8exMhDkWmjAVL3nAXEehCW9uepirSC21HfBI997s737_bWHhqHPxy3Se3_3BtC6DGAfb6H6PQqDq3ZQEjoCDDgly5nD17NPRhmMlvb_gbAvDw2tHASHJ_R2ejPylAhIBgaZ3lGEyVkBk6CSgRA.CfUlxswFY-r6FTm5.RlqwO-TPLtQL4xBUTCSO9dUE2wvSjL5PLCktvORQP2BJMbBJDeuGYe0TGauxlxyTRJNliRuJ4zw9ipbmEQW6HQn95R534BY5QzsNnUg_QQqFXVl2ar76pdrctnKRZG5dmdQY__RdbhBGt2rS7qy-bL10hxEeA2tZNR_N-7I0J4AlalK0VRt7yP52pyYnjRo8p8gpQ5n1Cm6VMJLNR9SULpd2A9X3JI8Q0kkLNVxpZe4TjovQUKk9HVkQXQ94uSwPkhMN3UavwVC7f4N06fC4FuPCEfBqH-7kS9OuDZIyhsQf7XDM1635qD3Slntv5Mq6MeK4H6dHP-jPTlbizSxrR4ItZ1XPWmVMxj_CbmcEL8UL87t6FZqOaBMqlyso_UMiTRjeumDZKASXhwG2aHHtj7vHWeWI-gkCUlwLRE1TotOpu4mPez5IjaXB5-oqB0lfooZTKZ_rSdhG2FQCpsNO-sU4DpKBJ2ZLGoBSn0z7MEPRY5l5-0NV2b3JEwIUT4ZqfP1nHeEvWXBpLZRSQVcvopQe-9EGvktClsyghah5707E3hS2Tj_l5JQO4H6sajfGeVLijL0QcGNfCqqvltA9joxwjNMGbdyEgN02MDGQqmYxnSQvsnaZwCoiFyyUvGpSKB4-W4vNdf0sPdjYqrVnbMY2wNcIdVInOgHII8qAoAFf23Aw0gbcTnXIHx49IfJ0WijQfXxHG4Ian4gch7i7PQgGLp0ibIaKhJC2NVuGpnrH2EJHPdYaZQvpPad66Eajy9kKwwDmBSHt1DIP5E3es3eEdveAkK9ju7s9BXbdGi5e8wzn7ta5g-96fQoj60l-iIr0lRl82BqgPevsYaBjrLiODkoSiZjVjhIYLhlRp9Va0GHLqSn0iW7OhAoaEBxSwZ8P4H2tFyzWQjOTynBBILizxoA0h1BjyOt6MGKzAIl9iSvBk8vCOGmReaQTTmQTLe0EUO3-yY1eQTNZIMFwX3LjwAVfvRt1vTaH0HpEDDTuKRp-Bp8HorhcCmMyF-uyZjrY3zNDzJMhCtqYTamsr_DfvelffRFrf2UmEjf6fFTVUM8vliMzue4c-OFPkS0e6LHQZ5ivADsydQsDFskCHRItyVNTkC6d63KX4rNVpS8e9RdZvoeWB7rWVWeFIW9tPToxdh23Wt8WP-Q08jKHIszxho6Jt3jaZC46ZYhyKr8DBbsF1XnYQaTxqGNpIGXqqJ74FfLMQEgUzByZw4HgNd-AeyLLV1qOlRAF4Zyb3STSY6M8HuWRoSDzq5tGeSgis5CelihJyTeZ_Gnw_oMP5fbYYPkrR951jPgFbqPxAuPg8EEtku6amYfrPBEN3g.zu4t7E8Aa7bKuV8mzxtbkA\",\r\n    \"email\": \"m.petrolati@gmail.com\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirm",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"email\": \"m.petrolati@gmail.com\",\r\n       \"code\":\"901509\"\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/confirm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"confirm"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
