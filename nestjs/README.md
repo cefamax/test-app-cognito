@@ -24,7 +24,7 @@ npm run start
 ```
 
 ## 6. Use application
-Thi application is a NestJS to test Cognito authentication. 
+This is a Nestjs application to test Cognito authentication. 
 </br>
 Contains the following route:
 - auth/register --> Register user
