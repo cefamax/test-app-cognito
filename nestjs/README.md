@@ -36,3 +36,6 @@ Contains the following route:
 
 ## 7. Documentation
 The file ./postman/cognito.postman_collection.json can be imported in Postman application to test this api.
+
+## Licensing
+[MIT](./../LICENSE)

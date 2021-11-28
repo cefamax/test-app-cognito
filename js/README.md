@@ -1,5 +1,5 @@
 # NodeJS AWS Cognito function test
-Nodejs application for cognito authentication functionality
+Nodejs application for [AWS Cognito](https://aws.amazon.com/en/cognito/) authentication functionality
 </br>
 ## 1. Prerequisites
 - NodeJs 12+
@@ -28,3 +28,6 @@ Contains the following functions:
 - Change password
 - Delete attributes
 - Delete user
+
+## Licensing
+[MIT](./../LICENSE)
