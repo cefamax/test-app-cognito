@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
+</p>
+
 # NestJS integration AWS Cognito
 [NestJS](https://nestjs.com/) application with [AWS Cognito](https://aws.amazon.com/en/cognito/) authentication functionality
 </br>
